@@ -97,4 +97,5 @@ Resultado: TODAS LAS PRUEBAS PASARON (0 fallos)
 > Revisando la respuesta del modelo noté que el análisis de complejidad lo entregó sin mencionar el riesgo del tipo `size_t`: si la guarda inicial no existiera, con `len == 0` la expresión `len - 1` se desborda hacia abajo y `der` apuntaría muy lejos del buffer. Por eso verifiqué que la condición `len < 2` cubriera tanto el buffer vacío como el de un solo elemento antes de calcular `der`. Para comprobarlo armé un test harness con `assert` que prueba `NULL`, longitud 0, longitud 1, longitud par ("abcd"), longitud impar ("abcde") y la propiedad de que invertir dos veces regresa el buffer original. Lo compilé con `gcc -std=c99 -Wall -Wextra -fsanitize=address,undefined` y todas las pruebas pasaron sin reportes de AddressSanitizer ni UBSan.
 
 ---
-**Firma digital:** elguachiloco69
+**Firma digital:** ReyesDiego002
+
