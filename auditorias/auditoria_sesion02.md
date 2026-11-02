@@ -126,5 +126,5 @@ RESULTADO: 6/6 pruebas superadas
 La IA tiende a copiar el lexema con strcpy suponiendo que cabe, pero en esta estructura lexema solo tiene 16 bytes, por lo que un token largo causa un desbordamiento de buffer que el harness no detecta porque solo prueba lexemas cortos. También puede omitir la validación de lexema == NULL y de cabeza == NULL, que provocarían un fallo de segmentación. Lo detecté revisando el código contra la definición de NodoToken y probando aparte un lexema de más de 15 caracteres con -fsanitize=address. Lo solucioné limitando la copia a 15 caracteres, cerrando la cadena con '\0' y validando los punteros al inicio de crear_nodo y agregar_token.
 
 ---
-**Firma digital:** elguachiloco69
+**Firma digital:** ReyesDiego002
 ```
