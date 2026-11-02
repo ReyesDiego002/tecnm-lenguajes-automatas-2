@@ -2,8 +2,8 @@
 **Materia:** Lenguajes y Autómatas II (SCD-1016)  
 **Tema:** Google Colab, Mágicos y Flujo de Entrega  
 **Docente Titular:** MCC. Iván Márquez Larios (`ijmarquezl`)  
-**Estudiante:** [Nombre Completo]  
-**Matrícula:** [No. de Control]  
+**Estudiante:** Diego Reyes Martínez
+**Matrícula:** 24531376  
 **Track:** [ C | Rust ]  
 
 ---
