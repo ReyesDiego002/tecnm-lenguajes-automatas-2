@@ -2,8 +2,8 @@
 **Materia:** Lenguajes y Autómatas II (SCD-1016)  
 **Tema:** Inferencia y Promoción de Tipos  
 **Docente Titular:** MCC. Iván Márquez Larios (`ijmarquezl`)  
-**Estudiante:** [Nombre Completo]  
-**Matrícula:** [No. de Control]  
+**Estudiante:** [Diego Reyes MArtínez]  
+**Matrícula:** [24531376]  
 **Track:** C (el harness evalúa C; la versión en Rust es opcional y no se califica con este harness)  
 
 ---
@@ -57,4 +57,4 @@ RESULTADO: n/n pruebas superadas
 > 
 
 ---
-**Firma digital:** [Usuario de GitHub]
+**Firma digital:** [ReyesDiego002]
