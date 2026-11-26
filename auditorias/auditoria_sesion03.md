@@ -123,6 +123,7 @@ Salida del harness:
 [ 5] contar_lineas(inexistente)         esperado: -1           obtenido: -1           OK
 [ 6] escribir_texto(ruta invalida)      esperado: -1           obtenido: -1           OK
 RESULTADO: 6/6 pruebas superadas
+TODO EN VERDE. Documenta tu auditoria en auditorias/auditoria_sesion03.md
 ```
 --
 ### Reporte Crítico
