@@ -96,6 +96,7 @@ Salida del harness:
 [ 6] invertir(NULL)                     esperado: sin crash    obtenido: sin crash    OK
 
 RESULTADO: 6/6 pruebas superadas
+TODO EN VERDE. Documenta tu auditoria en auditorias/auditoria_sesion01.md
 ```
 
 ### Reporte Crítico
