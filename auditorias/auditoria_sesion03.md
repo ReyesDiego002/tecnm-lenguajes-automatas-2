@@ -114,6 +114,17 @@ int contar_lineas(const char *ruta) {
 * [x] No existen accesos fuera de límites ni *Memory Leaks*.
 * [x] La complejidad teórica coincide con la implementada.
 
+Salida del harness:
+```text
+[ 1] escribir_texto(...)==0             esperado: 0            obtenido: 0            OK
+[ 2] contar_lineas(3 lineas)            esperado: 3            obtenido: 3            OK
+[ 3] contar_lineas(sin salto final)     esperado: 2            obtenido: 2            OK
+[ 4] contar_lineas(archivo vacio)       esperado: 0            obtenido: 0            OK
+[ 5] contar_lineas(inexistente)         esperado: -1           obtenido: -1           OK
+[ 6] escribir_texto(ruta invalida)      esperado: -1           obtenido: -1           OK
+RESULTADO: 6/6 pruebas superadas
+```
+--
 ### Reporte Crítico
 *¿Qué caso borde o problema omitió la IA y cómo lo solucionaste?*
 > En su primera respuesta la IA contaba una línea por cada llamada a `fgets`. Eso funciona con líneas cortas, pero si una línea mide más de 255 caracteres, `fgets` la parte en varios pedazos y la IA la contaba como varias líneas. El harness de la sesión no prueba ese caso, así que lo detecté revisando el código y pensando en qué pasa cuando el buffer se llena. Lo corregí revisando si cada pedazo termina en `\n`: solo en ese caso cuento una línea completa, y con la bandera `linea_abierta` cuento la última línea si el archivo termina sin salto final. También revisé que usara `fclose` en todos los caminos de error y que no cambiara las firmas del contrato. Después compilé con `-Wall -Wextra -Werror` y el harness salió 6/6 en verde.
